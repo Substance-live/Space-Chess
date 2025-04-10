@@ -1,7 +1,7 @@
 # 🧠 Skill Chess
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Substance-live/Space-Chess)
-[![Downloads](https://pepy.tech/badge/pygame)](https://pepy.tech/projects/pygame)
+[![Downloads PyGame lib](https://pepy.tech/badge/pygame)](https://pepy.tech/projects/pygame)
 
 
 A strategy-based chess-inspired game with custom units, skills, animations, and resource mechanics. Made with 💖 and pygame.
