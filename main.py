@@ -775,6 +775,12 @@ def start_flash(pos1, pos2):
 
 
 def end_screen(player):  # Экран концовки
+    for i in range(73):
+        counter_end = i
+        screen.blit(end[counter_end], (0, 0))
+        pygame.display.flip()
+        timer.tick(FPS)
+
     player *= -1
     if player == -1:
         player = "Красный игрок"
@@ -1002,6 +1008,10 @@ counter_2 = 0
 ashes_pos = (-100, -100)
 pos_animation_kill = None
 
+end = [pygame.image.load(f"animation/end/{i}.png") for i in range(73)]
+counter_end = 0
+end_pos = (1920, 1080)
+
 stars = [pygame.image.load(f'animation/stars/{i}.png') for i in range(12)]
 counter_3 = 0
 stars_pos = (-100, -100)
@@ -1149,6 +1159,10 @@ while True:
     if counter_2 == 90:  # Анимация зелёных пылинок
         counter_2 = 0
 
+    counter_end += 1
+    if counter_end == 73:
+        counter_end = 0
+
     counter_3 += 1
     if counter_3 == 12:  # Анимация зелёных пылинок
         counter_3 = 0
@@ -1291,6 +1305,7 @@ while True:
     screen.blit(flash[counter_flash], flash_pos_2)
     screen.blit(ashes[counter_2], ashes_pos)
     screen.blit(stars[counter_3], stars_pos)
+    screen.blit(end[counter_end], end_pos)
 
     if counter_tick != None:
         counter_tick += 1
