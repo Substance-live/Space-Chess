@@ -58,7 +58,7 @@ To start the game, run either:
 $ python main.py
 ```
 
-### 🧠 Features
+## 🧠 Features
 * Turn-based tactical chess combat
 * Custom fantasy units and teams
 * Mana-based skill system
@@ -66,7 +66,7 @@ $ python main.py
 * Two-player mode on one machine
 * Rich UI with timers, skill panels, and mana counters
 
-### 💡 Future Improvements
+## 💡 Future Improvements
 - AI opponent
 - Network multiplayer
 - Skill editor / mod support
