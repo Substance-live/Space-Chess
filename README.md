@@ -4,7 +4,7 @@
 
 A strategy-based chess-inspired game with custom units, skills, animations, and resource mechanics. Made with pygame.
 
-![Gameplay Gif](your_gif_link_here.gif)
+![Gameplay](assets/gameplay.gif)
 
 ---
 
