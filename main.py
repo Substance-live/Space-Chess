@@ -106,11 +106,12 @@ def ret_places(row, column, type):
         if (row, column) in not_started_RED and data_model[column - 2][row] == 0 and data_model[column - 1][row] == 0:
             ret.append([row, column - 2])
         for i in range(-1, 2, 2):  # Создание списка с числами -1;1
-            if 0 <= row + i <= COUNT_TITLE - 1 and 0 <= column - 1 <= COUNT_TITLE - 1 and data_model[column - 1][row + i] in BLUE_LIST:
+            if 0 <= row + i <= COUNT_TITLE - 1 and 0 <= column - 1 <= COUNT_TITLE - 1 and data_model[column - 1][
+                row + i] in BLUE_LIST:
                 ret.append([row + i, column - 1])
 
     elif type in (11, None):  # Проверка синей мыши (пешки)
-        if counter_turns_skill_2 == 0 or not (p2_skill_2_on):
+        if counter_turns_skill_2 == 0 or not p2_skill_2_on:
             turns_list = (-1, 1)
         else:
             turns_list = (-2, -1, 1, 2)
@@ -121,7 +122,8 @@ def ret_places(row, column, type):
         if (row, column) in not_started_BLUE and data_model[column + 2][row] == 0 and data_model[column + 1][row] == 0:
             ret.append([row, column + 2])
         for i in range(-1, 2, 2):  # Создание списка с числами -1;1
-            if 0 <= row + i <= COUNT_TITLE - 1 and 0 <= column + 1 <= COUNT_TITLE - 1 and data_model[column + 1][row + i] in RED_LIST:
+            if 0 <= row + i <= COUNT_TITLE - 1 and 0 <= column + 1 <= COUNT_TITLE - 1 and data_model[column + 1][
+                row + i] in RED_LIST:
                 ret.append([row + i, column + 1])
 
     if type in (2, 9, None):  # Проверка диагональных прыжков на 1
@@ -974,8 +976,8 @@ skill_list = [
 ]
 
 # Кристалл маны
-mana1 = 252
-mana2 = 102
+mana1 = 0
+mana2 = 0
 
 # Переменные экономики
 ROUND_GROW_MANA = 1  # Рост маны за ход
@@ -1057,10 +1059,12 @@ while True:
                             skill_list[p1_skill_draw][1]:  # Скилл красного игрока
                         p1_skill_selected = True
                     elif arrows_pos_left_1[0] <= event.pos[0] <= arrows_pos_left_1[0] + SIZE_ARROWS[0] and \
-                            arrows_pos_left_1[1] <= event.pos[1] <= arrows_pos_left_1[1] + SIZE_ARROWS[1]:  # Левая стрелка
+                            arrows_pos_left_1[1] <= event.pos[1] <= arrows_pos_left_1[1] + SIZE_ARROWS[
+                        1]:  # Левая стрелка
                         p1_skill_draw -= 1 if p1_skill_draw != 1 else -4
                     elif arrows_pos_right_1[0] <= event.pos[0] <= arrows_pos_right_1[0] + SIZE_ARROWS[0] and \
-                            arrows_pos_right_1[1] <= event.pos[1] <= arrows_pos_right_1[1] + SIZE_ARROWS[1]:  # Правая стрелка
+                            arrows_pos_right_1[1] <= event.pos[1] <= arrows_pos_right_1[1] + SIZE_ARROWS[
+                        1]:  # Правая стрелка
                         p1_skill_draw += 1 if p1_skill_draw != 5 else -4
                 elif side_turn == 1 and not (p2_skill_selected):  # Перелистываение скиллов хода синих
                     if SIZE[0] - 180 - POS_SKILL1[0] <= event.pos[0] <= SIZE[0] - 180 - POS_SKILL1[0] + 185 and \
@@ -1068,10 +1072,12 @@ while True:
                             skill_list[p2_skill_draw][1]:  # Скилл синего игрока
                         p2_skill_selected = True
                     elif arrows_pos_left_2[0] <= event.pos[0] <= arrows_pos_left_2[0] + SIZE_ARROWS[0] and \
-                            arrows_pos_left_2[1] <= event.pos[1] <= arrows_pos_left_2[1] + SIZE_ARROWS[1]:  # Левая стрелка
+                            arrows_pos_left_2[1] <= event.pos[1] <= arrows_pos_left_2[1] + SIZE_ARROWS[
+                        1]:  # Левая стрелка
                         p2_skill_draw -= 1 if p2_skill_draw != 1 else -4
                     elif arrows_pos_right_2[0] <= event.pos[0] <= arrows_pos_right_2[0] + SIZE_ARROWS[0] and \
-                            arrows_pos_right_2[1] <= event.pos[1] <= arrows_pos_right_2[1] + SIZE_ARROWS[1]:  # Правая стрелка
+                            arrows_pos_right_2[1] <= event.pos[1] <= arrows_pos_right_2[1] + SIZE_ARROWS[
+                        1]:  # Правая стрелка
                         p2_skill_draw += 1 if p2_skill_draw != 5 else -4
 
                 # Выбор фигуры на доске
