@@ -1,8 +1,8 @@
-# 🧠 Skill Chess
+# 🧠 Space Chess
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/Substance-live/Space-Chess)
 
-A strategy-based chess-inspired game with custom units, skills, animations, and resource mechanics. Made with 💖 and pygame.
+A strategy-based chess-inspired game with custom units, skills, animations, and resource mechanics. Made with pygame.
 
 ![Gameplay Gif](your_gif_link_here.gif)
 
@@ -42,13 +42,13 @@ Each player can choose from 5 powerful skills:
 > Python 3.6+ required. Game built using [pygame](https://www.pygame.org/).
 
 Install with pip:
-```bash
+``` bash
 pip install pygame
 ```
 
 And clone the repo:
 
-```bash
+``` bash
 $ https://github.com/Substance-live/Space-Chess.git
 ```
 
@@ -72,7 +72,7 @@ $ python main.py
 - Skill editor / mod support
 - Sound effects and music
 
-### 🤝 Contributions
+## 🤝 Contributions
 Have ideas or want to help? Fork the repo and make it better — whether it's new features, better graphics, or bug fixes!
 
 Issues and pull requests are welcome. ✨
