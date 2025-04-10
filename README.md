@@ -41,17 +41,27 @@ Each player can choose from 5 powerful skills:
 
 > Python 3.6+ required. Game built using [pygame](https://www.pygame.org/).
 
-Install with pip:
-``` bash
-pip install pygame
-```
-
-And clone the repo:
-
-``` bash
-$ https://github.com/Substance-live/Space-Chess.git
-```
-
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Substance-live/Space-Chess.git
+   cd Space-Chess
+   ```
+2. **Create and activate a virtual environment**:
+   * On windows:
+     ```bash
+     python -m venv venv
+     venv\Scripts\activate
+     ```
+   * On macOS/Linux:
+     ```bash
+     python3 -m venv venv
+     source venv/bin/activate
+     ```
+3. **Install the dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+   
 ### 🎮 Start Game
 To start the game, run either:
 ```bash
